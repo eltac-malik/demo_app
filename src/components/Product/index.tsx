@@ -11,7 +11,7 @@ export const Product = (product: any) => {
   const item = product?.product || {};
 
   return (
-    <Card sx={{ width: 400, height: 300, margin: 1 }}>
+    <Card className="card-item" sx={{ width: 400, height: 300, margin: 2 }}>
       <CardMedia sx={{ height: 140 }} image={`${item?.thumbnail}`} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

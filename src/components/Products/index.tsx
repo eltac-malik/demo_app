@@ -15,7 +15,7 @@ export const Products = () => {
 
   const { isLoading, data: products = [] } = useQuery(
     QueryId.PRODUCT,
-    () => axios.get<{ products: IProducts }>(ENDPOINTS.GET_PRODUCTS()),
+    () => axios.get<{ products: IProducts | any }>(ENDPOINTS.GET_PRODUCTS()),
     {
       select: (res) => res?.data?.products,
     }
@@ -39,8 +39,8 @@ export const Products = () => {
         ? <Spinner/>
         : !filteredProduct.length
         ? "not found"
-        : filteredProduct.map((e: any) => {
-            return <Product product={e} />;
+        : filteredProduct.map((product: any) => {
+            return <Product product={product} />;
           })}
     </div>
   );

@@ -1,6 +1,5 @@
 
 .container {
-  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -37,4 +36,8 @@
   font-size: 20px;
   margin-right: 10px;
   font-weight: bold;
+}
+
+.card-item:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }

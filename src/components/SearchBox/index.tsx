@@ -6,7 +6,7 @@ import { raitings } from "../../common/constant";
 
 export const SearchBox = () => {
   const dispatch = useDispatch();
-  const filter = useSelector((state) => state.product.filter);
+  const filter = useSelector((state:any) => state.product.filter);
 
   const handleFilter = (key: string, value: number) => {
     dispatch(setFilter({ ...filter, [key]: value }));
@@ -14,12 +14,12 @@ export const SearchBox = () => {
 
   return (
     <div className="searchbox">
-      <h2>Filter</h2>
+      <h2>Filter Product</h2>
 
       <div className="field">
         <label>Title</label>
         <TextField
-          onChange={(e) => handleFilter("title", e.target.value)}
+          onChange={(e:any) => handleFilter("title", e.target.value)}
           value={filter.title}
           style={{ width: 500 }}
           type="text"
