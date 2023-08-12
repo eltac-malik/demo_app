@@ -22,7 +22,7 @@ export const Product = (product: any) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
+        <Button className="price-btn">{item?.price} USD</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>

@@ -49,6 +49,10 @@
   text-transform: uppercase;
 }
 
+.price-btn {
+  font-size: 25px !important;
+}
+
 @media (max-width:900px) {
     .field {
       width: 70%;
