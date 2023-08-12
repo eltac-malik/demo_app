@@ -32,16 +32,17 @@ export const Products = () => {
     });
   }, [filter, products]);
 
-
   return (
     <div className="products">
-      {isLoading
-        ? <Spinner/>
-        : !filteredProduct.length
-        ? "not found"
-        : filteredProduct.map((product: any) => {
-            return <Product product={product} />;
-          })}
+      {isLoading ? (
+        <Spinner />
+      ) : !filteredProduct.length ? (
+        <p className="not-found">not found !!!</p>
+      ) : (
+        filteredProduct.map((product: any) => {
+          return <Product product={product} />;
+        })
+      )}
     </div>
   );
 };

@@ -41,3 +41,10 @@
 .card-item:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }
+
+.not-found {
+  font-size: 40px; 
+  color: red;
+  font-weight: bold;;
+  text-transform: uppercase;
+}
