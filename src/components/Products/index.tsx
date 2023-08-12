@@ -25,8 +25,8 @@ export const Products = () => {
     if (filter === initialFilter) return products;
     return products.filter((product: any) => {
       return (
-        product?.price > filter.price &&
-        product?.rating > filter.rating &&
+        product?.price >= filter.price &&
+        product?.rating >= filter.rating &&
         product?.title.toLowerCase().includes(filter.title.toLowerCase())
       );
     });
